@@ -1,46 +1,23 @@
 name: Snake generator
-
 on:
   schedule:
-    - cron: "0 6 * * *"    # ежедневно 06:00 UTC
+    - cron: "0 6 * * *"
   workflow_dispatch:
   push:
-    branches: ["main"]
-
+    branches: [ "main" ]
 permissions:
   contents: write
-
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Prepare workspace
-        run: |
-          mkdir -p dist
-          echo "Runner: $(uname -a)"
-          echo "Date: $(date -u +"%Y-%m-%dT%H:%M:%SZ")"
-
-      - name: Generate snake (SVG + GIF)
+      - name: Generate snake
         uses: Platane/snk@v3
         with:
           github_user_name: ${{ github.repository_owner }}
           outputs: |
-            dist/snake-custom.svg?palette=github&square=1&size=20
-            dist/snake-custom-dark.svg?palette=github-dark&square=1&size=20
-            dist/snake-custom.gif?palette=github&square=1&size=20&frame_duration=60&color_snake=orange&color_dots=#ebedf0,#c6e48b,#7bc96f,#239a3b,#196127
-
-      - name: List dist
-        run: |
-          echo "Listing dist contents:"
-          ls -la dist || true
-          echo
-          for f in dist/*; do
-            [ -f "$f" ] && echo "$(basename "$f"): $(wc -c < "$f") bytes";
-          done
-          echo
-          if command -v file >/dev/null 2>&1; then file dist/*; fi
-
+            dist/github-snake.svg
+            dist/github-snake-dark.svg?palette=github-dark
       - name: Publish to output branch
         uses: crazy-max/ghaction-github-pages@v3.1.0
         with:
@@ -48,13 +25,3 @@ jobs:
           build_dir: dist
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Show publish commit
-        if: always()
-        run: |
-          echo "If publish succeeded, files are now at the 'output' branch root."
-          echo "Repository: ${GITHUB_REPOSITORY}"
-          echo "Check raw URLs shortly after:"
-          echo "https://raw.githubusercontent.com/lopastineba/lopastineba/output/snake-custom.svg"
-          echo "https://raw.githubusercontent.com/lopastineba/lopastineba/output/snake-custom-dark.svg"
-          echo "https://raw.githubusercontent.com/lopastineba/lopastineba/output/snake-custom.gif"
