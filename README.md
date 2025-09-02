@@ -1,96 +1,55 @@
-<table align="center" width="680"><tr><td>
-<h1 align="center">👋 Hi, I'm lopastineba 🐍</h1>
+<h1 align="center">Hi, I'm lopastineba 👋</h1>
 <p align="center">
-  <em>Ctrl+C, Ctrl+V → refactor → understand (maybe)</em>
+  <em>Backend Engineer • Python • FastAPI • Celery • PostgreSQL</em>
 </p>
 
+<!-- Stats -->
 <p align="center">
-  <img src="https://img.shields.io/badge/Backend-Python%20%7C%20FastAPI-informational?logo=python&logoColor=white&color=3776AB" />
-  <img src="https://img.shields.io/badge/ORM-SQLAlchemy-informational?logo=alchemy&logoColor=white&color=E34F26" />
-  <img src="https://img.shields.io/badge/Task%20Queue-Celery-informational?logo=celery&logoColor=white&color=37814A" />
-  <img src="https://img.shields.io/badge/DB-PostgreSQL-informational?logo=postgresql&logoColor=white&color=4169E1" />
+  <img src="https://github-readme-stats.vercel.app/api?username=lopastineba&show_icons=true&theme=radical&hide_border=true&include_all_commits=true" width="48%" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=lopastineba&layout=compact&theme=radical&hide_border=true&langs_count=6" width="48%" />
 </p>
 
-</td></tr></table>
-
-```python
-class Developer:
-    def __init__(self):
-        self.name = "lopastineba"
-        self.status = "still copy-pasting... but improving!"
-        self.stack = ["Python", "FastAPI", "SQLAlchemy", "Celery", "PostgreSQL"]
-        self.motto = "Ctrl+C, Ctrl+V → refactor → understand (maybe)"
-
-    def say_hello(self):
-        return f"Hello from {self.name}! 🐍"
-
-print(Developer().say_hello())
-
-```
-<table align="center" width="680"><tr><td>
-<h2 align="center">🧭 About</h2>
+<!-- Streak -->
 <p align="center">
-Building APIs with <b>FastAPI</b>, orchestrating work with <b>Celery</b>, and persisting data in <b>PostgreSQL</b>.<br>
-Pragmatic clean code: typing, tests, CI, and measurable improvements over time.<br>
-Interests: performance, async IO, structured logging, and robust deployment patterns.
+  <img src="https://streak-stats.demolab.com?user=lopastineba&theme=radical&hide_border=true&date_format=M%20j%5B%2C%20Y%5D" width="95%" />
 </p>
-</td></tr></table>
 
-<table align="center" width="680"><tr><td>
-<h2 align="center">🧰 Tech</h2>
+<!-- Tech Stack Badges -->
 <p align="center">
-- Languages: Python (3.11+), a bit of Bash and SQL<br>
-- Backend: FastAPI, Pydantic, SQLAlchemy, Alembic, Celery/Redis<br>
-- Infra: Docker, Compose, GitHub Actions, Poetry/uv, Pre-commit
+  <img src="https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white&style=for-the-badge" />
+  <img src="https://img.shields.io/badge/FastAPI-009688?logo=fastapi&logoColor=white&style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Celery-F86C2A?logo=celery&logoColor=white&style=for-the-badge" />
+  <img src="https://img.shields.io/badge/PostgreSQL-4169E1?logo=postgresql&logoColor=white&style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=white&style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Redis-DC382D?logo=redis&logoColor=white&style=for-the-badge" />
 </p>
-</td></tr></table>
 
-<table align="center" width="680"><tr><td>
-<h2 align="center">🚢 Things I ship</h2>
+---
+
+### 🧠 About
+
+- 💼 Building robust backend systems with **async Python**
+- 🛠️ Focused on **clean architecture**, **observability**, and **maintainable code**
+- 🔍 Passionate about **performance**, **distributed systems**, and **reliable task queues**
+- 📦 Open-source contributor and lifelong learner
+
+---
+
+### 🚀 Recent Work
+
+- 📊 Parsing and analyzing job data from HH.ru at scale
+- 🔁 Designing idempotent background jobs with Celery & Redis
+- 🛡️ Securing APIs with JWT, rate limiting, and input validation
+- 📈 Monitoring with Prometheus, Grafana, and structured logging
+
+---
+
+### 📬 Let’s connect
+
+Have a project idea? Want to discuss Python or system design?  
+Feel free to open an issue or ping me — I’m always up for a good tech chat.
+
+<!-- Contribution Snake (Platane) -->
 <p align="center">
-- API-first services with OpenAPI, auth, rate limits, and observability (metrics/traces)<br>
-- ETL tasks and background jobs with retries/backoff and idempotency keys<br>
-- Migrations and seeders that don’t break prod at 2am
+  <img src="https://raw.githubusercontent.com/lopastineba/lopastineba/output/dist/github-snake.svg" alt="GitHub Snake" width="880" />
 </p>
-</td></tr></table>
-
-<table align="center" width="680"><tr><td>
-<h2 align="center">📊 Stats</h2>
-<p align="center">
-<img width="49%" src="https://github-readme-stats.vercel.app/api?username=lopastineba&show_icons=true&theme=transparent&hide_border=true" />
-<img width="49%" src="https://github-readme-streak-stats.herokuapp.com?user=lopastineba&theme=transparent&hide_border=true" />
-</p>
-</td></tr></table>
-
-<table align="center" width="680"><tr><td>
-<h2 align="center">🧱 Toolbox</h2>
-<p align="center">
-<img src="https://img.shields.io/badge/Editor-Neovim%20%7C%20VS%20Code-3C3C3C?logo=visualstudiocode&logoColor=white" />
-<img src="https://img.shields.io/badge/Pkg-Poetry%20%7C%20uv-60A5FA?logo=poetry&logoColor=white" />
-<img src="https://img.shields.io/badge/CI-GitHub%20Actions-2088FF?logo=githubactions&logoColor=white" />
-<img src="https://img.shields.io/badge/Container-Docker-2496ED?logo=docker&logoColor=white" />
-<img src="https://img.shields.io/badge/Testing-Pytest-0A9EDC?logo=pytest&logoColor=white" />
-</p>
-</td></tr></table>
-
-<table align="center" width="680"><tr><td>
-<h2 align="center">🧪 Latest activity</h2>
-<p align="center">
-- Crafting small, focused libs and examples for FastAPI + SQLAlchemy 2.0<br>
-- Experimenting with Celery autoscaling and distributed tracing (OTel)<br>
-- Tuning Postgres queries with EXPLAIN ANALYZE and proper indexes
-</p>
-</td></tr></table>
-
-<table align="center" width="680"><tr><td>
-<h2 align="center">🔗 Connect</h2>
-<p align="center">
-<a href="https://github.com/lopastineba">
-<img src="https://img.shields.io/badge/GitHub-lopastineba-161B22?logo=github" />
-</a>
-</p>
-</td></tr></table>
-
-<picture>
-  <img src="https://raw.githubusercontent.com/lopastineba/lopastineba/output/snake-custom.svg?ts=7" width="95%" alt="snake" />
-</picture>
