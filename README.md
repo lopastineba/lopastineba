@@ -1,5 +1,4 @@
 <table align="center" width="680"><tr><td>
-
 <h1 align="center">👋 Hi, I'm lopastineba 🐍</h1>
 <p align="center">
   <em>Ctrl+C, Ctrl+V → refactor → understand (maybe)</em>
@@ -96,9 +95,9 @@ Interests: performance, async IO, structured logging, and robust deployment patt
 <!-- Contributions (Snake) -->
 <p align="center">
 <picture>
-<source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/lopastineba/lopastineba/output/github-snake-dark.svg?t=1">
-<source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/lopastineba/lopastineba/output/github-snake.svg?t=1">
-<img alt="snake animation" src="https://raw.githubusercontent.com/lopastineba/lopastineba/output/github-snake.svg?t=1" width="95%" />
+<source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/lopastineba/lopastineba/output/github-snake-dark.svg?t=2">
+<source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/lopastineba/lopastineba/output/github-snake.svg?t=2">
+<img alt="snake animation" src="https://raw.githubusercontent.com/lopastineba/lopastineba/output/github-snake.svg?t=2" width="95%" />
 </picture>
 </p>
 </td></tr></table>
