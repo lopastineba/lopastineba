@@ -91,11 +91,9 @@ Interests: performance, async IO, structured logging, and robust deployment patt
 </p>
 </td></tr></table>
 
-- name: Show publish commit
-  if: always()
-  run: |
-    echo "If publish succeeded, files are now at the 'output' branch root."
-    echo "Check raw URLs shortly after:"
-    echo "https://raw.githubusercontent.com/lopastineba/lopastineba/output/snake-custom.svg"
-    echo "https://raw.githubusercontent.com/lopastineba/lopastineba/output/snake-custom-dark.svg"
-    echo "https://raw.githubusercontent.com/lopastineba/lopastineba/output/snake-custom.gif"
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/lopastineba/lopastineba/output/snake-custom-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/lopastineba/lopastineba/output/snake-custom.svg" />
+  <img alt="GitHub Snake" src="https://raw.githubusercontent.com/lopastineba/lopastineba/output/snake-custom.svg" />
+</picture>
+
