@@ -1,0 +1,36 @@
+name: Snake generator
+
+on:
+  schedule:
+    - cron: "0 6 * * *"  # Ежедневно в 06:00 UTC
+  workflow_dispatch:      # Возможность запуска вручную
+  push:
+    branches: 
+      - "main"            # Запуск при пуше в ветку main
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Шаг 1: Генерация змейки (SVG и GIF)
+      - name: Generate snake (SVG + GIF)
+        uses: Platane/snk@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            dist/github-snake.svg?palette=github&square=1&size=20
+            dist/github-snake-dark.svg?palette=github-dark&square=1&size=20
+            dist/github-snake.gif?palette=github&square=1&size=20&frame_duration=60&color_snake=orange&color_dots=#ebedf0,#c6e48b,#7bc96f,#239a3b,#196127
+
+      # Шаг 2: Публикация в ветку output
+      - name: Publish to output branch
+        uses: crazy-max/ghaction-github-pages@v3.1.0
+        with:
+          target_branch: output
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
