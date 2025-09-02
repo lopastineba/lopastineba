@@ -95,9 +95,7 @@ Interests: performance, async IO, structured logging, and robust deployment patt
   if: always()
   run: |
     echo "If publish succeeded, files are now at the 'output' branch root."
-    echo "Repository: ${GITHUB_REPOSITORY}"
     echo "Check raw URLs shortly after:"
-    echo "https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/output/github-snake.svg"
-    echo "https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/output/github-snake-dark.svg"
-    echo "https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/output/ocean.gif"
-
+    echo "https://raw.githubusercontent.com/lopastineba/lopastineba/output/snake-custom.svg"
+    echo "https://raw.githubusercontent.com/lopastineba/lopastineba/output/snake-custom-dark.svg"
+    echo "https://raw.githubusercontent.com/lopastineba/lopastineba/output/snake-custom.gif"
