@@ -49,11 +49,13 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Show publish commit
-        if: always()
-        run: |
-          echo "If publish succeeded, files are now at the 'output' branch root."
-          echo "Check raw URLs shortly after:"
-          echo "https://raw.githubusercontent.com/${{ github.repository }}/output/github-snake.svg"
-          echo "https://raw.githubusercontent.com/${{ github.repository }}/output/github-snake-dark.svg"
-          echo "https://raw.githubusercontent.com/${{ github.repository }}/output/github-snake.gif"
+- name: Show publish commit
+  if: always()
+  run: |
+    echo "If publish succeeded, files are now at the 'output' branch root."
+    echo "Repository: ${GITHUB_REPOSITORY}"
+    echo "Check raw URLs shortly after:"
+    echo "https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/output/github-snake.svg"
+    echo "https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/output/github-snake-dark.svg"
+    echo "https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/output/ocean.gif"
+
