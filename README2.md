@@ -91,9 +91,17 @@ Interests: performance, async IO, structured logging, and robust deployment patt
 </td></tr></table>
 
 <p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/lopastineba/lopastineba/output/dist/github-snake-dark.svg" />
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/lopastineba/lopastineba/output/dist/github-snake.svg" />
-    <img src="https://raw.githubusercontent.com/lopastineba/lopastineba/output/dist/github-snake.svg" alt="GitHub Snake" width="880" />
-  </picture>
+<img src="https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white&style=for-the-badge" />
+<img src="https://img.shields.io/badge/FastAPI-009688?logo=fastapi&logoColor=white&style=for-the-badge" />
+<img src="https://img.shields.io/badge/Celery-F86C2A?logo=celery&logoColor=white&style=for-the-badge" />
+<img src="https://img.shields.io/badge/PostgreSQL-4169E1?logo=postgresql&logoColor=white&style=for-the-badge" />
+<img src="https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=white&style=for-the-badge" />
+</p>
+
+<p align="center">
+<picture>
+<source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/lopastineba/lopastineba/output/github-snake-dark.svg" />
+<source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/lopastineba/lopastineba/output/github-snake.svg" />
+<img src="https://raw.githubusercontent.com/lopastineba/lopastineba/output/github-snake.svg" alt="GitHub Contribution Snake" width="880" />
+</picture>
 </p>
