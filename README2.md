@@ -1,4 +1,9 @@
+<table align="center" width="680"><tr><td>
+<h1 align="center">👋 Hi, I'm lopastineba 🐍</h1>
 <p align="center">
+  <em>Ctrl+C, Ctrl+V → refactor → understand (maybe)</em>
+</p>
+  <p align="center">
   <img src="https://img.shields.io/badge/Backend-Python%20%7C%20FastAPI-informational?logo=python&logoColor=white&color=3776AB" />
   <img src="https://img.shields.io/badge/ORM-SQLAlchemy-informational?logo=alchemy&logoColor=white&color=E34F26" />
   <img src="https://img.shields.io/badge/Task%20Queue-Celery-informational?logo=celery&logoColor=white&color=37814A" />
@@ -85,6 +90,10 @@ Interests: performance, async IO, structured logging, and robust deployment patt
 </p>
 </td></tr></table>
 
-<picture>
-  <img src="https://raw.githubusercontent.com/lopastineba/lopastineba/output/snake-custom.svg?ts=7" width="95%" alt="snake" />
-</picture>
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/lopastineba/lopastineba/output/dist/github-snake-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/lopastineba/lopastineba/output/dist/github-snake.svg" />
+    <img src="https://raw.githubusercontent.com/lopastineba/lopastineba/output/dist/github-snake.svg" alt="GitHub Snake" width="880" />
+  </picture>
+</p>
