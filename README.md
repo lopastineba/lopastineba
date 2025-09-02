@@ -91,5 +91,13 @@ Interests: performance, async IO, structured logging, and robust deployment patt
 </p>
 </td></tr></table>
 
-<table align="center" width="680"><tr><td>
-<!-- Contributions (Snake) --> <p align="center"> <picture> <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/lopastineba/lopastineba/output/github-snake-dark.svg?t=2"> <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/lopastineba/lopastineba/output/github-snake.svg?t=2"> <img alt="snake animation" src="https://raw.githubusercontent.com/lopastineba/lopastineba/output/github-snake.svg?t=2" width="95%" /> </picture> </p>
+- name: Show publish commit
+  if: always()
+  run: |
+    echo "If publish succeeded, files are now at the 'output' branch root."
+    echo "Repository: ${GITHUB_REPOSITORY}"
+    echo "Check raw URLs shortly after:"
+    echo "https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/output/github-snake.svg"
+    echo "https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/output/github-snake-dark.svg"
+    echo "https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/output/ocean.gif"
+
