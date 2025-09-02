@@ -2,11 +2,10 @@ name: Snake generator
 
 on:
   schedule:
-    - cron: "0 6 * * *"  # Ежедневно в 06:00 UTC
-  workflow_dispatch:      # Возможность запуска вручную
+    - cron: "0 6 * * *"    # ежедневно 06:00 UTC
+  workflow_dispatch:
   push:
-    branches: 
-      - "main"            # Запуск при пуше в ветку main
+    branches: ["main"]
 
 permissions:
   contents: write
@@ -16,7 +15,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Шаг 1: Генерация змейки (SVG и GIF)
+      - name: Prepare workspace
+        run: |
+          mkdir -p dist
+          echo "Runner: $(uname -a)"
+          echo "Date: $(date -u +"%Y-%m-%dT%H:%M:%SZ")"
+
       - name: Generate snake (SVG + GIF)
         uses: Platane/snk@v3
         with:
@@ -26,7 +30,17 @@ jobs:
             dist/github-snake-dark.svg?palette=github-dark&square=1&size=20
             dist/github-snake.gif?palette=github&square=1&size=20&frame_duration=60&color_snake=orange&color_dots=#ebedf0,#c6e48b,#7bc96f,#239a3b,#196127
 
-      # Шаг 2: Публикация в ветку output
+      - name: List dist
+        run: |
+          echo "Listing dist contents:"
+          ls -la dist || true
+          echo
+          for f in dist/*; do
+            [ -f "$f" ] && echo "$(basename "$f"): $(wc -c < "$f") bytes";
+          done
+          echo
+          which file >/dev/null 2>&1 && file dist/* || true
+
       - name: Publish to output branch
         uses: crazy-max/ghaction-github-pages@v3.1.0
         with:
@@ -34,3 +48,12 @@ jobs:
           build_dir: dist
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Show publish commit
+        if: always()
+        run: |
+          echo "If publish succeeded, files are now at the 'output' branch root."
+          echo "Check raw URLs shortly after:"
+          echo "https://raw.githubusercontent.com/${{ github.repository }}/output/github-snake.svg"
+          echo "https://raw.githubusercontent.com/${{ github.repository }}/output/github-snake-dark.svg"
+          echo "https://raw.githubusercontent.com/${{ github.repository }}/output/github-snake.gif"
