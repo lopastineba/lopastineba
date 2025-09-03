@@ -14,13 +14,13 @@ class Developer:
 print(Developer().say_hello())
 ```
 
+<!-- Epic GitHub Snake Animation -->
 <p align="center">
-<picture>
-<source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/lopastineba/lopastineba/output/github-snake-dark.svg" />
-<source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/lopastineba/lopastineba/output/github-snake.svg" />
-<img src="https://raw.githubusercontent.com/lopastineba/lopastineba/output/github-snake.svg" alt="GitHub Contribution Snake" width="880" />
-</picture>
+  <img src="https://raw.githubusercontent.com/lopastineba/lopastineba/output/github-snake-dark.svg" alt="EPIC GitHub Snake: кинематографический геймплей" width="800" />
 </p>
+
+
+
 
 <p align="center">
 <img src="https://github-readme-stats.vercel.app/api?username=lopastineba&show_icons=true&theme=radical&hide_border=true&include_all_commits=true" width="49%" />
