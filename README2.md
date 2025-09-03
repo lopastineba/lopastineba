@@ -89,7 +89,7 @@ Interests: performance, async IO, structured logging, and robust deployment patt
 </a>
 </p>
 </td></tr></table>
-
+https://raw.githubusercontent.com/lopastineba/lopastineba/output/github-snake.svg
 <p align="center">
 <img src="https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white&style=for-the-badge" />
 <img src="https://img.shields.io/badge/FastAPI-009688?logo=fastapi&logoColor=white&style=for-the-badge" />
@@ -98,11 +98,7 @@ Interests: performance, async IO, structured logging, and robust deployment patt
 <img src="https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=white&style=for-the-badge" />
 </p>
 
-<!-- Contribution Snake (Platane) -->
+<!-- Epic GitHub Snake Animation -->
 <p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/lopastineba/lopastineba/output/github-snake-dark.svg" />
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/lopastineba/lopastineba/output/github-snake.svg" />
-    <img src="https://raw.githubusercontent.com/lopastineba/lopastineba/output/github-snake.svg" alt="GitHub Contribution Snake" width="800" />
-  </picture>
+  <img src="https://raw.githubusercontent.com/lopastineba/lopastineba/output/github-snake.svg" alt="EPIC GitHub Snake: всратый геймплей неудачной игры" width="800" />
 </p>
