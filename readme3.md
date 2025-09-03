@@ -16,7 +16,7 @@ print(Developer().say_hello())
 
 <!-- Epic GitHub Snake Animation -->
 <p align="center">
-  <img src="https://raw.githubusercontent.com/lopastineba/lopastineba/output/github-snake-dark.svg" alt="EPIC GitHub Snake: кинематографический геймплей" width="800" />
+  <img src="https://raw.githubusercontent.com/lopastineba/lopastineba/output/github-snake.svg" alt="EPIC GitHub Snake: всратый геймплей неудачной игры" width="800" />
 </p>
 
 
