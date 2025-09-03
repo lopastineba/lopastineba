@@ -98,10 +98,11 @@ Interests: performance, async IO, structured logging, and robust deployment patt
 <img src="https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=white&style=for-the-badge" />
 </p>
 
+<!-- Contribution Snake (Platane) -->
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/lopastineba/lopastineba/output/github-snake-dark.svg" />
     <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/lopastineba/lopastineba/output/github-snake.svg" />
-    <img src="https://raw.githubusercontent.com/lopastineba/lopastineba/output/github-snake.svg" alt="Неприлично пиздатая змейка" width="800" />
+    <img src="https://raw.githubusercontent.com/lopastineba/lopastineba/output/github-snake.svg" alt="GitHub Snake Animation" width="800" />
   </picture>
 </p>
