@@ -1,5 +1,4 @@
 name: Streak & Snake (Custom)
-
 on:
   schedule:
     - cron: "0 6 * * *"   # Ежедневно в 06:00 UTC
@@ -8,31 +7,25 @@ on:
     branches: [ "main" ]
     paths:
       - "output/github-snake.svg"
-      - "output/github-snake-dark.svg"
       - ".github/workflows/streak-snake.yml"  # Автозапуск при изменении workflow
-
 permissions:
   contents: write
-
 jobs:
   publish-snake:
     runs-on: ubuntu-latest
     steps:
       - name: 🔁 Checkout repository
         uses: actions/checkout@v4
-
       - name: 📦 Copy custom snake assets
         run: |
           mkdir -p dist
           cp output/github-snake.svg dist/
-          cp output/github-snake-dark.svg dist/
-          echo "✅ Custom snake animation files copied to /dist"
-
+          echo "✅ Universal snake animation file copied to /dist"
       - name: 🚀 Publish to output branch
         uses: crazy-max/ghaction-github-pages@v3.1.0
         with:
           target_branch: output
           build_dir: dist
-          commit_message: "🎨 publish: update cinematic GitHub snake (auto)"
+          commit_message: "🎨 publish: update epic GitHub snake (auto)"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
