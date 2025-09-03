@@ -89,7 +89,7 @@ Interests: performance, async IO, structured logging, and robust deployment patt
 </a>
 </p>
 </td></tr></table>
-https://raw.githubusercontent.com/lopastineba/lopastineba/output/github-snake.svg
+
 <p align="center">
 <img src="https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white&style=for-the-badge" />
 <img src="https://img.shields.io/badge/FastAPI-009688?logo=fastapi&logoColor=white&style=for-the-badge" />
