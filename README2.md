@@ -103,6 +103,6 @@ Interests: performance, async IO, structured logging, and robust deployment patt
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/lopastineba/lopastineba/output/github-snake-dark.svg" />
     <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/lopastineba/lopastineba/output/github-snake.svg" />
-    <img src="https://raw.githubusercontent.com/lopastineba/lopastineba/output/github-snake.svg" alt="GitHub Snake Animation" width="800" />
+    <img src="https://raw.githubusercontent.com/lopastineba/lopastineba/output/github-snake.svg" alt="GitHub Contribution Snake" width="800" />
   </picture>
 </p>
