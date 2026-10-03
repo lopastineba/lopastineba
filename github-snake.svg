@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 800 200"
+     width="800"
+     height="200"
+     role="img"
+     aria-label="EPIC GitHub Snake: адаптивная тема + кинематографический геймплей">
+  <desc>
+    ЭПИЧЕСКАЯ ЗМЕЙКА с автоопределением темы: темная/светлая тема, 
+    сложные маневры, драматические эффекты, кинематографическая камера!
+  </desc>
+  <defs>
+    <style>
+      /* ТЕМНАЯ ТЕМА (по умолчанию) */
+      .bg { fill: #0d1117; }
+      .grid { fill: #161b22; stroke: #21262d; stroke-width: 0.5; }
+      .snake-head { fill: #39d353; }
+      .snake-body { fill: #2ea043; }
+      .snake-tail { fill: #238636; }
+      .apple { fill: #ff6b6b; }
+      .apple-inner { fill: #ff8e53; }
+      .apple-core { fill: #ffd93d; }
+      .apple-stem { fill: #4ecdc4; }
+      .obstacle { fill: #484f58; }
+      .flash { fill: #ffffff; opacity: 0; }
+      .hud { fill: #c9d1d9; font: bold 12px monospace; }
+      .hud-accent { fill: #ffd700; }
+      .hud-speed { fill: #ff4757; }
+      .hud-power { fill: #00d9ff; }
+      .hud-level { fill: #39d353; }
+      .trail { fill: none; stroke: #2ea043; stroke-width: 3; opacity: 0.4; stroke-linecap: round; }
+      .danger { fill: #ff3838; }
+      .combo { fill: #ffd700; font: bold 16px monospace; opacity: 0; }
+      .power { fill: #00d9ff; }
+      .power-inner { fill: #00ffff; }
+      .power-core { fill: #ffffff; }
+      .grid-dot { fill: #30363d; }
+      .border { stroke: #30363d; }
+      .hud-bg { fill: #0d1117; }
+      .eye { fill: #0d1117; }
+      .tongue { fill: #ff4757; }
+      
+      /* СВЕТЛАЯ ТЕМА */
+      @media (prefers-color-scheme: light) {
+        .bg { fill: #ffffff; }
+        .grid { fill: #f6f8fa; stroke: #e6edf3; }
+        .snake-head { fill: #238636; }
+        .snake-body { fill: #2ea043; }
+        .snake-tail { fill: #1a7f37; }
+        .apple { fill: #dc2626; }
+        .apple-inner { fill: #ef4444; }
+        .apple-core { fill: #fbbf24; }
+        .apple-stem { fill: #059669; }
+        .obstacle { fill: #8b949e; }
+        .flash { fill: #000000; }
+        .hud { fill: #1f2428; }
+        .hud-accent { fill: #d97706; }
+        .hud-speed { fill: #dc2626; }
+        .hud-power { fill: #0369a1; }
+        .hud-level { fill: #166534; }
+        .trail { stroke: #2ea043; }
+        .combo { fill: #d97706; }
+        .power { fill: #0369a1; }
+        .power-inner { fill: #0ea5e9; }
+        .power-core { fill: #1f2937; }
+        .grid-dot { fill: #d1d5db; }
+        .border { stroke: #e5e7eb; }
+        .hud-bg { fill: #ffffff; }
+        .eye { fill: #ffffff; }
+        .tongue { fill: #dc2626; }
+      }
+      
+      /* ЭПИЧЕСКАЯ КАМЕРА с драматическими эффектами */
+      .epic-camera {
+        animation: epic-cinematography 12s ease-in-out infinite;
+        transform-origin: 400px 100px;
+      }
+      
+      @keyframes epic-cinematography {
+        0% { transform: translate(0, 0) scale(1) rotate(0deg); }
+        8% { transform: translate(-5px, 2px) scale(1.02) rotate(0.5deg); }
+        15% { transform: translate(3px, -3px) scale(0.98) rotate(-0.3deg); }
+        25% { transform: translate(-2px, 4px) scale(1.05) rotate(0.8deg); }
+        35% { transform: translate(6px, -1px) scale(0.95) rotate(-0.5deg); }
+        45% { transform: translate(-4px, 3px) scale(1.03) rotate(1deg); }
+        55% { transform: translate(2px, -5px) scale(0.97) rotate(-0.7deg); }
+        65% { transform: translate(-3px, 2px) scale(1.04) rotate(0.4deg); }
+        75% { transform: translate(5px, -4px) scale(0.96) rotate(-0.9deg); }
+        85% { transform: translate(-1px, 3px) scale(1.02) rotate(0.6deg); }
+        95% { transform: translate(2px, -2px) scale(0.99) rotate(-0.2deg); }
+        100% { transform: translate(0, 0) scale(1) rotate(0deg); }
+      }
+      
+      /* ЭПИЧЕСКИЕ ДВИЖЕНИЯ ЗМЕЙКИ */
+      .epic-head { 
+        animation: epic-snake-path 10s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite;
+      }
+      .epic-body1 { animation: epic-body1-path 10s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite; }
+      .epic-body2 { animation: epic-body2-path 10s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite; }
+      .epic-body3 { animation: epic-body3-path 10s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite; }
+      .epic-body4 { animation: epic-body4-path 10s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite; }
+      .epic-body5 { animation: epic-body5-path 10s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite; }
+      
+      /* Сложный путь с крутыми поворотами и комбо */
+      @keyframes epic-snake-path {
+        0% { transform: translate(40px, 100px) rotate(0deg); }
+        5% { transform: translate(80px, 100px) rotate(0deg); }
+        10% { transform: translate(120px, 100px) rotate(0deg); }
+        12% { transform: translate(140px, 90px) rotate(-45deg); }
+        15% { transform: translate(160px, 60px) rotate(-90deg); }
+        20% { transform: translate(200px, 60px) rotate(-90deg); }
+        25% { transform: translate(260px, 60px) rotate(-90deg); }
+        27% { transform: translate(280px, 80px) rotate(-135deg); }
+        30% { transform: translate(300px, 120px) rotate(-180deg); }
+        35% { transform: translate(340px, 120px) rotate(-180deg); }
+        40% { transform: translate(400px, 120px) rotate(-180deg); }
+        42% { transform: translate(420px, 100px) rotate(-225deg); }
+        45% { transform: translate(440px, 60px) rotate(-270deg); }
+        50% { transform: translate(480px, 60px) rotate(-270deg); }
+        55% { transform: translate(540px, 60px) rotate(-270deg); }
+        57% { transform: translate(560px, 80px) rotate(-315deg); }
+        60% { transform: translate(580px, 120px) rotate(-360deg); }
+        65% { transform: translate(620px, 120px) rotate(-360deg); }
+        70% { transform: translate(680px, 120px) rotate(-360deg); }
+        72% { transform: translate(700px, 140px) rotate(-405deg); }
+        75% { transform: translate(720px, 180px) rotate(-450deg); }
+        80% { transform: translate(680px, 180px) rotate(-450deg); }
+        85% { transform: translate(600px, 180px) rotate(-450deg); }
+        90% { transform: translate(500px, 180px) rotate(-450deg); }
+        95% { transform: translate(400px, 180px) rotate(-450deg); }
+        100% { transform: translate(40px, 100px) rotate(-720deg); }
+      }
+      
+      @keyframes epic-body1-path {
+        0% { transform: translate(20px, 100px); }
+        8% { transform: translate(40px, 100px); }
+        12% { transform: translate(80px, 100px); }
+        15% { transform: translate(120px, 100px); }
+        20% { transform: translate(140px, 90px); }
+        25% { transform: translate(160px, 60px); }
+        30% { transform: translate(200px, 60px); }
+        35% { transform: translate(260px, 60px); }
+        40% { transform: translate(280px, 80px); }
+        45% { transform: translate(300px, 120px); }
+        50% { transform: translate(340px, 120px); }
+        55% { transform: translate(400px, 120px); }
+        60% { transform: translate(420px, 100px); }
+        65% { transform: translate(440px, 60px); }
+        70% { transform: translate(480px, 60px); }
+        75% { transform: translate(540px, 60px); }
+        80% { transform: translate(560px, 80px); }
+        85% { transform: translate(580px, 120px); }
+        90% { transform: translate(620px, 120px); }
+        95% { transform: translate(680px, 120px); }
+        100% { transform: translate(20px, 100px); }
+      }
+      
+      @keyframes epic-body2-path {
+        0% { transform: translate(0px, 100px); }
+        10% { transform: translate(20px, 100px); }
+        15% { transform: translate(40px, 100px); }
+        20% { transform: translate(80px, 100px); }
+        25% { transform: translate(120px, 100px); }
+        30% { transform: translate(140px, 90px); }
+        35% { transform: translate(160px, 60px); }
+        40% { transform: translate(200px, 60px); }
+        45% { transform: translate(260px, 60px); }
+        50% { transform: translate(280px, 80px); }
+        55% { transform: translate(300px, 120px); }
+        60% { transform: translate(340px, 120px); }
+        65% { transform: translate(400px, 120px); }
+        70% { transform: translate(420px, 100px); }
+        75% { transform: translate(440px, 60px); }
+        80% { transform: translate(480px, 60px); }
+        85% { transform: translate(540px, 60px); }
+        90% { transform: translate(560px, 80px); }
+        95% { transform: translate(580px, 120px); }
+        100% { transform: translate(0px, 100px); }
+      }
+      
+      @keyframes epic-body3-path {
+        0% { transform: translate(-20px, 100px); }
+        12% { transform: translate(0px, 100px); }
+        18% { transform: translate(20px, 100px); }
+        23% { transform: translate(40px, 100px); }
+        28% { transform: translate(80px, 100px); }
+        33% { transform: translate(120px, 100px); }
+        38% { transform: translate(140px, 90px); }
+        43% { transform: translate(160px, 60px); }
+        48% { transform: translate(200px, 60px); }
+        53% { transform: translate(260px, 60px); }
+        58% { transform: translate(280px, 80px); }
+        63% { transform: translate(300px, 120px); }
+        68% { transform: translate(340px, 120px); }
+        73% { transform: translate(400px, 120px); }
+        78% { transform: translate(420px, 100px); }
+        83% { transform: translate(440px, 60px); }
+        88% { transform: translate(480px, 60px); }
+        93% { transform: translate(540px, 60px); }
+        98% { transform: translate(560px, 80px); }
+        100% { transform: translate(-20px, 100px); }
+      }
+      
+      @keyframes epic-body4-path {
+        0% { transform: translate(-40px, 100px); }
+        15% { transform: translate(-20px, 100px); }
+        20% { transform: translate(0px, 100px); }
+        25% { transform: translate(20px, 100px); }
+        30% { transform: translate(40px, 100px); }
+        35% { transform: translate(80px, 100px); }
+        40% { transform: translate(120px, 100px); }
+        45% { transform: translate(140px, 90px); }
+        50% { transform: translate(160px, 60px); }
+        55% { transform: translate(200px, 60px); }
+        60% { transform: translate(260px, 60px); }
+        65% { transform: translate(280px, 80px); }
+        70% { transform: translate(300px, 120px); }
+        75% { transform: translate(340px, 120px); }
+        80% { transform: translate(400px, 120px); }
+        85% { transform: translate(420px, 100px); }
+        90% { transform: translate(440px, 60px); }
+        95% { transform: translate(480px, 60px); }
+        100% { transform: translate(-40px, 100px); }
+      }
+      
+      @keyframes epic-body5-path {
+        0% { transform: translate(-60px, 100px); }
+        18% { transform: translate(-40px, 100px); }
+        23% { transform: translate(-20px, 100px); }
+        28% { transform: translate(0px, 100px); }
+        33% { transform: translate(20px, 100px); }
+        38% { transform: translate(40px, 100px); }
+        43% { transform: translate(80px, 100px); }
+        48% { transform: translate(120px, 100px); }
+        53% { transform: translate(140px, 90px); }
+        58% { transform: translate(160px, 60px); }
+        63% { transform: translate(200px, 60px); }
+        68% { transform: translate(260px, 60px); }
+        73% { transform: translate(280px, 80px); }
+        78% { transform: translate(300px, 120px); }
+        83% { transform: translate(340px, 120px); }
+        88% { transform: translate(400px, 120px); }
+        93% { transform: translate(420px, 100px); }
+        98% { transform: translate(440px, 60px); }
+        100% { transform: translate(-60px, 100px); }
+      }
+      
+      /* ЭПИЧЕСКИЕ ЭФФЕКТЫ */
+      .mega-pulse { animation: mega-pulse 1.2s ease-in-out infinite; }
+      @keyframes mega-pulse {
+        0%, 100% { transform: scale(1); }
+        25% { transform: scale(1.15) rotate(5deg); }
+        50% { transform: scale(1.25) rotate(-5deg); }
+        75% { transform: scale(1.1) rotate(3deg); }
+      }
+      
+      .power-glow { animation: power-glow 0.8s ease-in-out infinite; }
+      @keyframes power-glow {
+        0%, 100% { opacity: 0.6; transform: scale(1); }
+        50% { opacity: 1; transform: scale(1.3); }
+      }
+      
+      .combo-text { animation: combo-appear 1s ease-out; }
+      @keyframes combo-appear {
+        0% { opacity: 0; transform: translateY(20px) scale(0.5); }
+        50% { opacity: 1; transform: translateY(-10px) scale(1.2); }
+        100% { opacity: 0; transform: translateY(-30px) scale(0.8); }
+      }
+      
+      .screen-shake { animation: screen-shake 0.3s ease-in-out; }
+      @keyframes screen-shake {
+        0%, 100% { transform: translate(0, 0); }
+        25% { transform: translate(-3px, 2px); }
+        50% { transform: translate(3px, -2px); }
+        75% { transform: translate(-2px, -3px); }
+      }
+      
+      .epic-trail { 
+        animation: epic-trail-flow 10s linear infinite;
+        stroke-dasharray: 50 20;
+      }
+      @keyframes epic-trail-flow {
+        0% { stroke-dashoffset: 0; }
+        100% { stroke-dashoffset: -70; }
+      }
+      
+      .obstacle-glow { animation: obstacle-glow 2s ease-in-out infinite; }
+      @keyframes obstacle-glow {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.6; }
+      }
+    </style>
+  </defs>
+  
+  <!-- ЭПИЧЕСКАЯ СЦЕНА -->
+  <g class="epic-camera">
+    <!-- Адаптивный фон -->
+    <rect x="0" y="0" width="800" height="200" class="bg"/>
+    
+    <!-- Усиленная сетка с адаптивными цветами -->
+    <defs>
+      <pattern id="epicGrid" width="20" height="20" patternUnits="userSpaceOnUse">
+        <rect width="20" height="20" class="grid"/>
+        <circle cx="10" cy="10" r="1" class="grid-dot" opacity="0.5"/>
+      </pattern>
+    </defs>
+    <rect x="20" y="20" width="760" height="160" fill="url(#epicGrid)" rx="8"/>
+    <rect x="19" y="19" width="762" height="162" fill="none" class="border" stroke-width="2" rx="8"/>
+    
+    <!-- Эпический след змейки -->
+    <path class="trail epic-trail" d="M 40 100 Q 200 60 300 120 Q 450 60 580 120 Q 700 180 750 100" stroke-width="6"/>
+    <path class="trail epic-trail" d="M 40 100 Q 180 80 280 100 Q 420 80 560 140 Q 680 160 730 120" stroke-width="4" opacity="0.6"/>
+    
+    <!-- Препятствия с адаптивными эффектами -->
+    <rect x="180" y="40" width="60" height="20" class="obstacle obstacle-glow" rx="3"/>
+    <rect x="350" y="140" width="80" height="20" class="obstacle obstacle-glow" rx="3"/>
+    <rect x="520" y="50" width="20" height="80" class="obstacle obstacle-glow" rx="3"/>
+    
+    <!-- МЕГА ЯБЛОКИ с адаптивными цветами -->
+    <g transform="translate(160, 60)" class="mega-pulse">
+      <circle r="12" class="apple"/>
+      <circle r="8" class="apple-inner"/>
+      <circle r="4" class="apple-core"/>
+      <rect x="-1" y="-16" width="2" height="8" class="apple-stem"/>
+    </g>
+    <g transform="translate(300, 120)" class="mega-pulse">
+      <circle r="12" class="apple"/>
+      <circle r="8" class="apple-inner"/>
+      <circle r="4" class="apple-core"/>
+      <rect x="-1" y="-16" width="2" height="8" class="apple-stem"/>
+    </g>
+    <g transform="translate(580, 120)" class="mega-pulse">
+      <circle r="12" class="apple"/>
+      <circle r="8" class="apple-inner"/>
+      <circle r="4" class="apple-core"/>
+      <rect x="-1" y="-16" width="2" height="8" class="apple-stem"/>
+    </g>
+    
+    <!-- POWER-UP яблоко с адаптивными цветами -->
+    <g transform="translate(440, 60)">
+      <circle r="15" class="power power-glow"/>
+      <circle r="10" class="power-inner" opacity="0.7"/>
+      <circle r="5" class="power-core"/>
+      <text x="0" y="5" text-anchor="middle" font="bold 8px monospace" class="eye">★</text>
+    </g>
+    
+    <!-- ЭПИЧЕСКИЕ ВСПЫШКИ -->
+    <circle cx="160" cy="60" r="25" class="flash screen-shake">
+      <animate attributeName="opacity" values="0;0;1;0.8;0" keyTimes="0;0.14;0.16;0.18;0.2" dur="10s" repeatCount="indefinite"/>
+      <animate attributeName="r" values="25;25;40;50;25" keyTimes="0;0.14;0.16;0.18;0.2" dur="10s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="300" cy="120" r="25" class="flash screen-shake">
+      <animate attributeName="opacity" values="0;0;1;0.8;0" keyTimes="0;0.29;0.31;0.33;0.35" dur="10s" repeatCount="indefinite"/>
+      <animate attributeName="r" values="25;25;40;50;25" keyTimes="0;0.29;0.31;0.33;0.35" dur="10s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="440" cy="60" r="35" class="power screen-shake">
+      <animate attributeName="opacity" values="0;0;1;0.9;0" keyTimes="0;0.44;0.46;0.48;0.5" dur="10s" repeatCount="indefinite"/>
+      <animate attributeName="r" values="35;35;55;70;35" keyTimes="0;0.44;0.46;0.48;0.5" dur="10s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="580" cy="120" r="25" class="flash screen-shake">
+      <animate attributeName="opacity" values="0;0;1;0.8;0" keyTimes="0;0.59;0.61;0.63;0.65" dur="10s" repeatCount="indefinite"/>
+      <animate attributeName="r" values="25;25;40;50;25" keyTimes="0;0.59;0.61;0.63;0.65" dur="10s" repeatCount="indefinite"/>
+    </circle>
+    
+    <!-- COMBO ТЕКСТ с адаптивными цветами -->
+    <text x="200" y="90" class="combo">
+      COMBO x2!
+      <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.18;0.2;0.25;0.3" dur="10s" repeatCount="indefinite"/>
+    </text>
+    <text x="350" y="90" class="combo">
+      COMBO x3!
+      <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.33;0.35;0.4;0.45" dur="10s" repeatCount="indefinite"/>
+    </text>
+    <text x="480" y="40" class="combo hud-power">
+      POWER-UP!
+      <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.48;0.5;0.55;0.6" dur="10s" repeatCount="indefinite"/>
+    </text>
+    <text x="620" y="90" class="combo">
+      MEGA COMBO!
+      <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.63;0.65;0.7;0.75" dur="10s" repeatCount="indefinite"/>
+    </text>
+    
+    <!-- ЭПИЧЕСКАЯ ЗМЕЙКА с адаптивными цветами -->
+    <!-- Голова с мощными эффектами -->
+    <g class="epic-head">
+      <circle r="15" class="snake-head" opacity="0.3"/>
+      <rect x="-12" y="-12" width="24" height="24" class="snake-head" rx="4"/>
+      <rect x="-8" y="-8" width="4" height="4" class="eye" rx="2"/>
+      <rect x="4" y="-8" width="4" height="4" class="eye" rx="2"/>
+      <rect x="10" y="-2" width="8" height="4" class="tongue" rx="2">
+        <animate attributeName="width" values="8;15;8" dur="1.5s" repeatCount="indefinite"/>
+      </rect>
+    </g>
+    
+    <!-- Сегменты тела с адаптивными эффектами -->
+    <g class="epic-body1">
+      <circle r="12" class="snake-body" opacity="0.2"/>
+      <rect x="-10" y="-10" width="20" height="20" class="snake-body" rx="3"/>
+    </g>
+    <g class="epic-body2">
+      <circle r="11" class="snake-body" opacity="0.2"/>
+      <rect x="-9" y="-9" width="18" height="18" class="snake-body" rx="3"/>
+    </g>
+    <g class="epic-body3">
+      <circle r="10" class="snake-tail" opacity="0.2"/>
+      <rect x="-8" y="-8" width="16" height="16" class="snake-body" rx="2"/>
+    </g>
+    <g class="epic-body4">
+      <circle r="9" class="snake-tail" opacity="0.2"/>
+      <rect x="-7" y="-7" width="14" height="14" class="snake-tail" rx="2"/>
+    </g>
+    <g class="epic-body5">
+      <circle r="8" class="snake-tail" opacity="0.2"/>
+      <rect x="-6" y="-6" width="12" height="12" class="snake-tail" rx="2"/>
+    </g>
+    
+    <!-- ЭПИЧЕСКИЙ HUD с адаптивными цветами -->
+    <rect x="0" y="0" width="800" height="50" class="hud-bg" opacity="0.8"/>
+    <text x="30" y="20" class="hud">EPIC SCORE: <tspan class="hud-accent">★ 1337 ★</tspan></text>
+    <text x="30" y="35" class="hud">LENGTH: 6 | COMBO: x4</text>
+    
+    <text x="300" y="20" class="hud">SPEED: <tspan class="hud-speed">▰▰▰▰▰</tspan> MAX</text>
+    <text x="300" y="35" class="hud">POWER: <tspan class="hud-power">████████▒▒</tspan></text>
+    
+    <text x="600" y="20" class="hud">LEVEL: <tspan class="hud-level">EPIC</tspan></text>
+    <text x="600" y="35" class="hud">STATUS: <tspan class="hud-accent">LEGENDARY</tspan></text>
+    
+    <!-- Финальные эффекты -->
+    <text x="400" y="190" text-anchor="middle" class="hud" opacity="0.6">
+      ▸ ЭПИЧЕСКОЕ ПРОХОЖДЕНИЕ ◂
+    </text>
+  </g>
+</svg>
